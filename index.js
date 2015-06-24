@@ -17,7 +17,7 @@ var runScriptOnChangePreprocessor = function(args, logger, config) {
       result = shell.exec(script);
     }
 
-    log.info('shell execution result', result);
+    log.debug('shell execution result', result);
 
     if (result && result.code !== 0 && stopOnError) {
       if (messageOnError) {
