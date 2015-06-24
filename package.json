@@ -1,0 +1,25 @@
+{
+  "name": "karma-runscript-preprocessor",
+  "version": "0.0.2",
+  "description": "run a script on file changed. it can bail the test running on script failed. it's suitable for using a single test-loader in karma-webpack.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyonlai/karma-runscript-preprocessor.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-preprocessor"
+  ],
+  "dependencies": {
+    "shelljs": "^0.5.1"
+  },
+  "author": "Yun Lai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lyonlai/karma-runscript-preprocessor/issues"
+  },
+  "homepage": "https://github.com/lyonlai/karma-runscript-preprocessor#readme"
+}
