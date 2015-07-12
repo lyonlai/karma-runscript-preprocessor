@@ -10,11 +10,22 @@ var runScriptOnChangePreprocessor = function(args, logger, config) {
 
   var messageOnError = (config && config.messageOnError) || null;
 
+  var runOnlyOnce = (config && config.runOnlyOnce) || null;
+
+  var scriptHasRun = false;
+
   return function(content, file, done) {
     var result = null;
 
+    if(runOnlyOnce && scriptHasRun) {
+      log.debug('script has been executed, not gonna run again, exiting');
+      return done(null, content);
+    }
+
     if (script) {
       result = shell.exec(script);
+
+      scriptHasRun = true;
     }
 
     log.debug('shell execution result', result);
